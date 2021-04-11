@@ -1,0 +1,67 @@
+@keyframes left_to_right {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0;
+    }
+  }
+
+
+
+.section-hero{
+    background-image: url(../../Assets//stevensPassHero.jpg);
+    height: 70vh;
+    width: 100%;
+    /* background-repeat: none; */
+    background-size:cover;
+    object-fit:cover;
+    background-position: center;
+}
+
+.hero-heading{
+   display: flex;
+   justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+}
+
+
+.Heading-text{
+    font-size: 6em;
+    color: rgb(22, 112, 22);
+    text-shadow: 5px 0 #010a1d;
+    letter-spacing:6px;
+    font-weight: 900;
+    font-family: "Archivo Black";
+    text-transform: uppercase;
+    animation: left_to_right 3s ease;
+}
+
+
+/* phone */
+@media screen and (max-width: 600px) {
+    .Heading-text{
+        font-size:3em;
+        animation: none;
+    }
+  }
+
+
+  /* tablets */
+@media screen and (min-width: 600px) {
+    .Heading-text{
+        font-size:4em;
+       animation: none;
+    }
+  }
+
+  /* landscape */
+  @media only screen and (min-width: 768px) {
+    .Heading-text{
+        font-size:5em;
+        animation: left_to_right 3s ease;
+    }
+  }
+
