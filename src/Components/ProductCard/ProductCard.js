@@ -13,7 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import clsx from "clsx";
 import Button from "@material-ui/core/Button";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, ...restProps }) => {
   const [expanded, setExpanded] = useState(false);
 
   //getting external style page
@@ -36,10 +36,11 @@ const ProductCard = ({ product }) => {
           className={classes.media}
           image={product.img}
           style={{ width: "131px" }}
-          alt=""
+          alt="Product"
         />
         <CardActions>
-          <IconButton
+          <Button
+            style={{ color: "yellow" }}
             className={clsx(classes.expand, {
               [classes.expandOpen]: expanded,
             })}
@@ -47,10 +48,8 @@ const ProductCard = ({ product }) => {
             aria-expanded={expanded}
             aria-label="show more"
           >
-            <Button className={classes.button}>
-              {expanded ? "Close" : "Learn More"}
-            </Button>
-          </IconButton>
+            {expanded ? "Close" : "Learn More"}
+          </Button>
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
