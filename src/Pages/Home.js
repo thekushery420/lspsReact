@@ -1,46 +1,39 @@
-import React from 'react'
-import {Grid}from "@material-ui/core"
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react";
+import { Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 
-import Hero from "../Components/Hero/Hero"
+import Hero from "../Components/Hero/Hero";
 
-import {ProductItems} from "../Components/ProductCard/ProductItems"
-import ProductCard from "../Components/ProductCard/ProductCard"
+import { ProductItems } from "../Components/ProductCard/ProductItems";
+import ProductCard from "../Components/ProductCard/ProductCard";
 
-// import Grid_Background from "../Assets/Card_Background.jpg"
+import Grid_Background from "../Assets/Cards_Background.PNG";
 
 const useStyles = makeStyles((theme) => ({
-   Grid: {
-    
-   
-     
-   }
- }));
- 
+  Grid: {
+    backgroundImage: `url(${Grid_Background})`,
+    backgroundSize: "cover",
+  },
+}));
 
 function Home() {
+  const classes = useStyles();
 
+  return (
+    <>
+      <section>
+        <Hero />
+      </section>
 
-    const classes = useStyles()
-
-    return (
-       <>
-       <section>
-         <Hero />
-       </section>
-       
-       <section>
-         <Grid className={classes.Grid}container spacing={4}>
-               {ProductItems.map(product =>(
-                  <ProductCard key={product.id} product={product} /> 
-               ))}
-         </Grid>
-       </section>
-       
-       
-       </>
-       
-    )
+      <section>
+        <Grid className={classes.Grid} container spacing={3}>
+          {ProductItems.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </Grid>
+      </section>
+    </>
+  );
 }
 
-export default Home
+export default Home;
