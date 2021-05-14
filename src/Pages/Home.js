@@ -15,7 +15,18 @@ const useStyles = makeStyles((theme) => ({
   Grid: {
     backgroundImage: `url(${Grid_Background})`,
     backgroundSize: "cover",
+    marginTop: "4em"
   },
+  home__aboutUsAndCardWrapper: {
+    height: "80vh",
+    [theme.breakpoints.down('md')]: {
+      height: "auto",
+    },
+    information_card_grid:{
+      marginTop: "3em"
+    }
+   
+  }
 }));
 
 function Home() {
@@ -27,26 +38,27 @@ function Home() {
         <Hero />
       </section>
 
-      <div className={classes.wrapper}>
-        <section className={classes.aboutUs}>
+      <div className={classes.home__aboutUsAndCardWrapper}>
           <AboutUs
-            title="How We're Diffrent"
-            about="We are a licensed Washington state recreational marjuana retailer. Here you will find friendly and knowledgable budtenders. 
-        The Last Stop Pot Shop is the LAST STOP to stock up on all your goodies before heading over the pass. Enjoy responsibly!
-        Our employees have decades of Marijuana Experience under their belts, with some having transitioned directly from the Medical 
-        Marijuana Field to the Recreational side of things. This means we know how to help you find exactly what you need, 
-        and we do it with a smile on our faces because we truly love what we do!"
+            title="How We're Different"
+            about=
+            "
+            We are a licensed Washington state recreational marjuana retailer. Here you will find friendly and knowledgable budtenders. 
+            The Last Stop Pot Shop is the LAST STOP to stock up on all your goodies before heading over the pass. Enjoy responsibly!
+            Our employees have decades of Marijuana Experience under their belts, with some having transitioned directly from the Medical
+            Marijuana Field to the Recreational side of things. This means we know how to help you find exactly what you need, 
+            and we do it with a smile on our faces because we truly love what we do!
+            "
           />
-        </section>
-
-        <section>
-          <Grid container spacing={3}>
+  
+          <Grid container spacing={2}>
             {InformationItems.map((item) => (
               <InformationCards key={item.id} item={item} />
             ))}
           </Grid>
-        </section>
-      </div>
+        </div>
+        
+     
 
       <section>
         <Grid className={classes.Grid} container spacing={3}>

@@ -33,9 +33,6 @@ function InformationCards({ item }) {
             <Button size="small" color="primary">
               {item.buttonText}
             </Button>
-            {/* <Button size="small" color="primary">
-              Learn More
-            </Button> */}
           </CardActions>
         </Card>
       </Grid>

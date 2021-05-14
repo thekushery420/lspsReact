@@ -2,23 +2,29 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    padding: "0",
     textAlign: "center",
   },
-  title: {
+  aboutUs__title: {
     color: "green",
     fontSize: "2.5em",
     fontWeight: "bold",
     margin: "0 auto",
     marginTop: "20px",
-    marginBottom: "20px",
-    paddingBottom: "20px",
+   paddingBottom: "10px",
+
+   [theme.breakpoints.down('md')]: {
+    fontSize: "1.8em",
   },
-  about: {
+   
+  },
+  aboutUs__description: {
     fontSize: "1.3em",
     fontWeight: "600",
-    fontFamily: "ariel",
     lineHeight: "1.4",
     letterSpacing: "1px",
+    paddingTop: "10px",
+
+
+    
   },
 }));

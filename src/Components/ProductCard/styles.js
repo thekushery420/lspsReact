@@ -9,11 +9,11 @@ export const useStyles = makeStyles((theme) => ({
     boxShadow: "3px 3px 3px 3px black",
     opacity: ".95",
   },
-  header: {
+  cardHeader: {
     textAlign: "center",
     color: "yellow",
   },
-  media: {
+  cardMedia: {
     height: 0,
     width: "100px",
     paddingTop: "52.25%", // 16:9
