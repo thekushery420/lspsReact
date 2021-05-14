@@ -11,7 +11,7 @@ export const InformationItems = [
   },
   {
     id: "2",
-    name: "Last Stop Rewards",
+    name: "LAST STOP REWARDS",
     image: shopImage,
     about:
       "It pays to be a member at Last Stop. Earn points for every dollar you spend!",

@@ -8,31 +8,36 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import CardActionArea from "@material-ui/core/CardActions";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+import Link from "@material-ui/core/Link";
 
 function InformationCards({ item }) {
   const classes = useStyles();
   return (
     <>
-      <Grid className={classes.Grid} xs={12} sm={8} md={6} lg={3}>
+      <Grid item className={classes.Grid} xs={12} sm={8} md={6} lg={3}>
         <Card className={classes.root}>
           <CardActionArea>
-            <CardContent className={classes.cardContent}>
+            <CardContent className={classes.informationCards__title}>
               <Typography gutterBottom variant="h5" component="h2">
                 {item.name}
               </Typography>
               <CardMedia
-                className={classes.media}
+                className={classes.informationCard__image}
                 image={item.image}
-                title="Contemplative Reptile"
               />
-              <Typography>{item.about}</Typography>
+              <Typography className={classes.informationCards__about}>
+                {item.about}
+              </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary">
+            <Link
+              className={classes.informationCard__Link}
+              target="_blank"
+              href="https://www.iheartjane.com/stores/2621/last-stop-pot-shop"
+            >
               {item.buttonText}
-            </Button>
+            </Link>
           </CardActions>
         </Card>
       </Grid>
