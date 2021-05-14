@@ -6,9 +6,11 @@ function AboutUs({ title, about }) {
   const classes = useStyles();
   return (
     <Container fixed className={classes.root}>
-      <div className={classes.div}>
-        <h1 className={classes.title}>{title}</h1>
-        <p className={classes.about}>{about}</p>
+      <div className={classes.aboutUs__infoWrapper}>
+        <h1 className={classes.aboutUs__title}>{title}</h1>
+        <hr style={{width:"35%", margin: "0 auto"}}/>
+        <div></div>
+        <p className={classes.aboutUs__description}>{about}</p>
       </div>
     </Container>
   );

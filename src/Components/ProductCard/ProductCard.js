@@ -7,7 +7,7 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
-import { IconButton } from "@material-ui/core";
+// import { IconButton } from "@material-ui/core";
 import Collapse from "@material-ui/core/Collapse";
 import Typography from "@material-ui/core/Typography";
 import clsx from "clsx";
@@ -28,12 +28,12 @@ const ProductCard = ({ product, ...restProps }) => {
     <Grid item xs={6} sm={6} md={6} lg={3}>
       <Card className={classes.root}>
         <CardHeader
-          className={classes.header}
+          className={classes.cardHeader}
           title={product.name}
           subheader="product"
         />
         <CardMedia
-          className={classes.media}
+          className={classes.cardMedia}
           image={product.img}
           style={{ width: "131px" }}
           alt="Product"
