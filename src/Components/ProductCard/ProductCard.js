@@ -1,0 +1,69 @@
+import React, { useState } from "react";
+import { useStyles } from "./styles";
+
+import { Grid } from "@material-ui/core";
+import Card from "@material-ui/core/Card";
+import CardHeader from "@material-ui/core/CardHeader";
+import CardMedia from "@material-ui/core/CardMedia";
+import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+// import { IconButton } from "@material-ui/core";
+import Collapse from "@material-ui/core/Collapse";
+import Typography from "@material-ui/core/Typography";
+import clsx from "clsx";
+import Button from "@material-ui/core/Button";
+
+const ProductCard = ({ product, ...restProps }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  //getting external style page
+  const classes = useStyles();
+
+  // learn more button
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
+  return (
+    <Grid item xs={6} sm={6} md={6} lg={3}>
+      <Card className={classes.root}>
+        <CardHeader
+          className={classes.cardHeader}
+          title={product.name}
+          subheader="product"
+        />
+        <CardMedia
+          className={classes.cardMedia}
+          image={product.img}
+          style={{ width: "131px" }}
+          alt="Product"
+        />
+        <CardActions>
+          <Button
+            style={{ color: "yellow" }}
+            className={clsx(classes.expand, {
+              [classes.expandOpen]: expanded,
+            })}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            {expanded ? "Close" : "Learn More"}
+          </Button>
+        </CardActions>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <Typography className={classes.Typography} paragraph>
+              {product.name} -
+            </Typography>
+            <Typography className={classes.Typography} paragraph>
+              {product.about}
+            </Typography>
+          </CardContent>
+        </Collapse>
+      </Card>
+    </Grid>
+  );
+};
+
+export default ProductCard;
