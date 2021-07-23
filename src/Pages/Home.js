@@ -1,7 +1,7 @@
 import React from "react";
 import AboutUs from "../Components/AboutSection/AboutUs";
 import Hero from "../Components/Hero/Hero";
-// import Grid_Background from "../Assets/Cards_Background.PNG";
+
 import ParallaxImage from "../Assets/parallax_Image.jpg";
 
 import { Grid } from "@material-ui/core";
@@ -18,16 +18,13 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     height: "auto",
-
-    // [theme.breakpoints.down("lg")]: {
-    //   height: "auto",
-    // },
   },
 
   Grid: {
-    // backgroundImage: `url(${Grid_Background})`,
     backgroundSize: "cover",
-    marginTop: "4em",
+    marginTop: "6em",
+    marginBottom: "4em",
+    minHeight: "700px",
   },
 
   informationCards__Grid: {
@@ -67,6 +64,7 @@ function Home() {
       </div>
 
       <Parallax backgroundImage={ParallaxImage} title={"Get Educated"} />
+
       <section>
         <Grid className={classes.Grid} container spacing={3}>
           {ProductItems.map((product) => (

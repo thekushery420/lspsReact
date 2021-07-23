@@ -105,9 +105,9 @@
   }
 
   .navbar-logo img {
-    height: 140px;
-    width: 200px;
-    margin-top: 0.2em;
+    height: 100px;
+    width: 130px;
+    margin-top: 0.5rem;
     border-radius: 10px;
   }
 
