@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme) => ({
   root: {
     margin: "0 auto",
+    marginTop: "3.9em",
   },
   aboutUs__title: {
     color: "green",
@@ -22,7 +23,7 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: "600",
     lineHeight: "1.4",
     letterSpacing: ".5px",
-    paddingTop: "10px",
+    paddingTop: "20px",
     textAlign: "center",
   },
 }));

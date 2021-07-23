@@ -9,13 +9,14 @@ export const useStyles = makeStyles((theme) => ({
 
   //card
   root: {
-    borderRadius: "20px",
+    borderRadius: "10px",
     boxShadow: "1px 1px 1px 1px rgba(2, 54, 56)",
     Width: "20%",
   },
 
-  informationCards__title: {
+  informationCard__title: {
     textAlign: "center",
+    color: "green",
   },
 
   informationCard__image: {
@@ -23,21 +24,28 @@ export const useStyles = makeStyles((theme) => ({
     width: "60%",
     margin: "auto",
     borderRadius: "10px",
+    paddingTop: "1em",
   },
 
-  informationCards__about: {
+  informationCard__about: {
     width: "80%",
     margin: "0 auto",
     paddingTop: ".6em",
-    fontSize: "1.1em",
+    fontSize: "1.2em",
+    color: "black",
   },
 
   informationCard__Link: {
-    color: "green",
+    color: "black",
     fontWeight: "bold",
     fontSize: "1.3em",
-    textDecoration: "none",
     cursor: "pointer",
-    padding: "1em",
+    padding: ".5em",
+    margin: ".5em",
+    border: "1px solid black",
+    textDecoration: "none",
+    "&:hover": {
+      background: "#005B8F",
+    },
   },
 }));

@@ -6,8 +6,9 @@ export const InformationItems = [
     name: "SHOP NOW",
     image: shopImage,
     about:
-      "Check out our amazing online menu! Place an order & pick up in-store",
+      "Check out our amazing online menu! Place an order & pick up in-store.",
     buttonText: "Shop Now",
+    backgroundColor: "#005B8F",
   },
   {
     id: "2",

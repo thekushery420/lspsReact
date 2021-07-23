@@ -10,14 +10,15 @@ import CardActionArea from "@material-ui/core/CardActions";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 
-function InformationCards({ item }) {
+function InformationCards(props) {
+  const { item } = props;
   const classes = useStyles();
   return (
     <>
       <Grid item className={classes.Grid} xs={12} sm={8} md={6} lg={3}>
         <Card className={classes.root}>
           <CardActionArea>
-            <CardContent className={classes.informationCards__title}>
+            <CardContent className={classes.informationCard__title}>
               <Typography gutterBottom variant="h5" component="h2">
                 {item.name}
               </Typography>
@@ -25,7 +26,7 @@ function InformationCards({ item }) {
                 className={classes.informationCard__image}
                 image={item.image}
               />
-              <Typography className={classes.informationCards__about}>
+              <Typography className={classes.informationCard__about}>
                 {item.about}
               </Typography>
             </CardContent>
@@ -35,6 +36,7 @@ function InformationCards({ item }) {
               className={classes.informationCard__Link}
               target="_blank"
               href="https://www.iheartjane.com/stores/2621/last-stop-pot-shop"
+              style={{ backgroundColor: `${props.backgroundColor}` }}
             >
               {item.buttonText}
             </Link>

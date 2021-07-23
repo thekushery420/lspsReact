@@ -1,7 +1,8 @@
 import React from "react";
 import AboutUs from "../Components/AboutSection/AboutUs";
 import Hero from "../Components/Hero/Hero";
-import Grid_Background from "../Assets/Cards_Background.PNG";
+// import Grid_Background from "../Assets/Cards_Background.PNG";
+import ParallaxImage from "../Assets/parallax_Image.jpg";
 
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -10,6 +11,7 @@ import { ProductItems } from "../Components/ProductCard/ProductItems";
 import ProductCard from "../Components/ProductCard/ProductCard";
 import InformationCards from "../Components/InformationCards/InformationCards";
 import { InformationItems } from "../Components/InformationCards/informationItems";
+import Parallax from "../Components/Parallax/parallax";
 
 const useStyles = makeStyles((theme) => ({
   home__aboutUsAndCardWrapper: {
@@ -23,13 +25,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   Grid: {
-    backgroundImage: `url(${Grid_Background})`,
+    // backgroundImage: `url(${Grid_Background})`,
     backgroundSize: "cover",
     marginTop: "4em",
   },
 
   informationCards__Grid: {
-    height: "auto",
+    height: "700px",
     padding: ".7em",
 
     [theme.breakpoints.down("md")]: {
@@ -55,11 +57,16 @@ function Home() {
 
         <Grid className={classes.informationCards__Grid} container spacing={2}>
           {InformationItems.map((item) => (
-            <InformationCards key={item.id} item={item} />
+            <InformationCards
+              key={item.id}
+              item={item}
+              backgroundColor={item.backgroundColor}
+            />
           ))}
         </Grid>
       </div>
 
+      <Parallax backgroundImage={ParallaxImage} title={"Get Educated"} />
       <section>
         <Grid className={classes.Grid} container spacing={3}>
           {ProductItems.map((product) => (
