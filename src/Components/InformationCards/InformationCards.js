@@ -15,7 +15,7 @@ function InformationCards(props) {
   const classes = useStyles();
   return (
     <>
-      <Grid item className={classes.Grid} xs={12} sm={8} md={6} lg={3}>
+      <Grid item className={classes.Grid} xs={12} sm={8} md={5} lg={4} xl={3}>
         <Card className={classes.root}>
           <CardActionArea>
             <CardContent className={classes.informationCard__title}>
