@@ -14,7 +14,7 @@ import ProductCard from "../Components/ProductCard/ProductCard";
 import InformationCards from "../Components/InformationCards/InformationCards";
 import Parallax from "../Components/Parallax/parallax";
 import AccordionSpecials from "../Components/AccordionSpecials/AccordionSpecials";
-import { green } from "@material-ui/core/colors";
+import Contact from "../Components/contactInformation/Contact";
 
 const useStyles = makeStyles((theme) => ({
   // about us
@@ -127,6 +127,9 @@ function Home() {
           ))}
         </div>
       </Grid>
+
+      {/* Contact Information*/}
+      <Contact />
     </>
   );
 }

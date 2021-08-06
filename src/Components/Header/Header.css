@@ -50,6 +50,7 @@
   background-color: cadetblue;
   border-radius: 4px;
   transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
 .fa-bars {
